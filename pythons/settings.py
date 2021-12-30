@@ -27,7 +27,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'templates_advanced.pythons_app',
+    'pythons.pythons_app',
+    'pythons.pythons_auth',
 ]
 
 MIDDLEWARE = [
@@ -40,7 +41,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'templates_advanced.urls'
+ROOT_URLCONF = 'pythons.urls'
 
 TEMPLATES = [
     {
@@ -59,7 +60,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'templates_advanced.wsgi.application'
+WSGI_APPLICATION = 'pythons.wsgi.application'
 
 
 # Database

@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import PythonCreateForm
 from .models import Python
-from templates_advanced.core.decorators import any_group_required
+from pythons.core.decorators import any_group_required
 from django.contrib.auth import authenticate, login, logout
 
 
