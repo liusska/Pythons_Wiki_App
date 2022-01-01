@@ -5,17 +5,6 @@ from pythons.core.decorators import any_group_required
 from django.contrib.auth import authenticate, login, logout
 
 
-def sign_in(request):
-    user = authenticate(username='liusska', password='123456')
-    login(request, user)
-    return redirect('index')
-
-
-def sign_out(request):
-    logout(request)
-    return redirect('index')
-
-
 def index(request):
     pythons = Python.objects.all()
     return render(request, 'index.html', {'pythons': pythons})
