@@ -19,7 +19,7 @@ class Migration(migrations.Migration):
                 ('first_name', models.CharField(max_length=20)),
                 ('last_name', models.CharField(max_length=20)),
                 ('age', models.IntegerField()),
-                ('profile_image', models.ImageField(upload_to='profiles')),
+                ('profile_image', models.ImageField(upload_to='profile')),
                 ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, primary_key=True, serialize=False, to='pythons_auth.pythonsuser')),
             ],
         ),

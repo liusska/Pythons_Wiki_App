@@ -30,7 +30,7 @@ INSTALLED_APPS = [
 
     'pythons.pythons_app',
     'pythons.pythons_auth',
-    'pythons.profiles',
+    'pythons.profile',
 ]
 
 MIDDLEWARE = [
