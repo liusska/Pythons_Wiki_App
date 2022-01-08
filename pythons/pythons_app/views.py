@@ -1,13 +1,21 @@
 from django.shortcuts import render, redirect
-from .forms import PythonCreateForm
-from .models import Python
 from pythons.core.decorators import any_group_required
 from django.contrib.auth import authenticate, login, logout
+from django.views.generic import ListView
+
+from .forms import PythonCreateForm
+from .models import Python
 
 
-def index(request):
-    pythons = Python.objects.all()
-    return render(request, 'index.html', {'pythons': pythons})
+# def index(request):
+#     pythons = Python.objects.all()
+#     return render(request, 'index.html', {'pythons': pythons})
+
+
+class IndexView(ListView):
+    template_name = 'index.html'
+    model = Python
+    context_object_name = 'pythons'
 
 
 # @login_required(login_url=reverse_lazy('sign in'))
