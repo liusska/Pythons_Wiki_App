@@ -13,6 +13,7 @@ class IndexView(ListView):
     template_name = 'index.html'
     model = Python
     context_object_name = 'pythons'
+    paginate_by = 5
 
 
 class PythonCreateView(AnyGroupRequiredMixin, CreateView):
